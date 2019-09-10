@@ -21,6 +21,8 @@ These are improvements the app can use if I had more time.
 - Add all needed icons
 - Remove API.plist and make it more ___secure___
 - fix constraint issues that I couldnt figure out
+- More documentation for base classes and network.
+- perhaps check out if I have any memory leaks
 
 
 
