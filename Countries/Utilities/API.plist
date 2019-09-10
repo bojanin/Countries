@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>hosts</key>
+	<dict>
+		<key>countries</key>
+		<string>restcountries-v1.p.rapidapi.com</string>
+	</dict>
+	<key>keys</key>
+	<dict>
+		<key>countries</key>
+		<string>XCuPFOPWz4mshutguHEUvlm86b7Yp1GQtuLjsnhLvAvS9e9iWt</string>
+	</dict>
+	<key>endpoints</key>
+	<dict>
+		<key>countries</key>
+		<string>https://restcountries-v1.p.rapidapi.com/all</string>
+	</dict>
+</dict>
+</plist>
