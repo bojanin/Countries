@@ -29,8 +29,6 @@ class CountriesTableViewController: BaseTableViewController<CountryTableViewCell
             controller.searchBar.setPositionAdjustment(UIOffset(horizontal: 0, vertical: 0), for: .bookmark)
             return controller
         })()
-
-
         Network.shared.download(from: .countries) { [weak self] (countries: [Country]?) in
             self?.items = countries
         }
@@ -61,7 +59,7 @@ class CountriesTableViewController: BaseTableViewController<CountryTableViewCell
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath) as! CountryTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CountryTableViewCell.reuseIdentifier, for: indexPath) as! CountryTableViewCell
         if resultsSearchController.isActive {
             cell.item = filteredItems[indexPath.row]
         } else {

@@ -21,7 +21,7 @@ class BaseTableViewController<T: BaseTableViewCell<U>, U>: UITableViewController
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.register(T.self, forCellReuseIdentifier: "cellID")
+        tableView.register(T.self, forCellReuseIdentifier: T.reuseIdentifier)
         onLoad()
     }
 
@@ -37,7 +37,7 @@ class BaseTableViewController<T: BaseTableViewCell<U>, U>: UITableViewController
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath) as! BaseTableViewCell<U>
+        let cell = tableView.dequeueReusableCell(withIdentifier: T.reuseIdentifier, for: indexPath) as! BaseTableViewCell<U>
         cell.item = items?[indexPath.row]
         return cell
     }

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		650D357A232674DE0072C82E /* API.plist in Resources */ = {isa = PBXBuildFile; fileRef = 650D3579232674DE0072C82E /* API.plist */; };
+		6513D8BD23299F9B0078B1DF /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6513D8BC23299F9B0078B1DF /* Reusable.swift */; };
+		6513D8BF2329A09D0078B1DF /* BaseTableVIewCell+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6513D8BE2329A09D0078B1DF /* BaseTableVIewCell+Ext.swift */; };
 		654138BA232673760074D889 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654138B9232673760074D889 /* AppDelegate.swift */; };
 		654138BC232673760074D889 /* CountriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654138BB232673760074D889 /* CountriesTableViewController.swift */; };
 		654138BF232673760074D889 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654138BD232673760074D889 /* Main.storyboard */; };
@@ -38,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		650D3579232674DE0072C82E /* API.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = API.plist; sourceTree = "<group>"; };
+		6513D8BC23299F9B0078B1DF /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		6513D8BE2329A09D0078B1DF /* BaseTableVIewCell+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseTableVIewCell+Ext.swift"; sourceTree = "<group>"; };
 		654138B6232673760074D889 /* Countries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		654138B9232673760074D889 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		654138BB232673760074D889 /* CountriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesTableViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6513D8BB23299F8A0078B1DF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				6513D8BC23299F9B0078B1DF /* Reusable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		654138AD232673760074D889 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +115,7 @@
 		654138B8232673760074D889 /* Countries */ = {
 			isa = PBXGroup;
 			children = (
+				6513D8BB23299F8A0078B1DF /* Protocols */,
 				65914EA42326FBA3006A9AAF /* Model */,
 				65914EA32326FB80006A9AAF /* Enums */,
 				65914E9E2326FB21006A9AAF /* Controllers */,
@@ -161,6 +174,7 @@
 			children = (
 				65914EA92326FE3A006A9AAF /* CountryTableViewCell.swift */,
 				65914EAB2326FFDC006A9AAF /* BaseTableViewCell.swift */,
+				6513D8BE2329A09D0078B1DF /* BaseTableVIewCell+Ext.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -292,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6513D8BD23299F9B0078B1DF /* Reusable.swift in Sources */,
 				65914EBF23272248006A9AAF /* CountriesTableView+Ext.swift in Sources */,
 				65914EB323270BA5006A9AAF /* Alert.swift in Sources */,
 				65914EAE23270351006A9AAF /* BaseTableViewController.swift in Sources */,
@@ -302,6 +317,7 @@
 				654138BA232673760074D889 /* AppDelegate.swift in Sources */,
 				65914E9D2326F580006A9AAF /* Country.swift in Sources */,
 				65914EAA2326FE3A006A9AAF /* CountryTableViewCell.swift in Sources */,
+				6513D8BF2329A09D0078B1DF /* BaseTableVIewCell+Ext.swift in Sources */,
 				654138DA2326738D0074D889 /* Network.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
