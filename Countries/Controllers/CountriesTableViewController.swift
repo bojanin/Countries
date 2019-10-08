@@ -33,8 +33,6 @@ class CountriesTableViewController: BaseTableViewController<CountryTableViewCell
         }
     }
 
-    
-
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let country: Country?
 
@@ -55,7 +53,6 @@ class CountriesTableViewController: BaseTableViewController<CountryTableViewCell
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return resultsSearchController.isActive ? filteredItems.count : (items?.count ?? 0)
     }
-
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CountryTableViewCell.reuseIdentifier, for: indexPath) as! CountryTableViewCell
@@ -90,9 +87,5 @@ class CountriesTableViewController: BaseTableViewController<CountryTableViewCell
         let cancelAction = UIAlertAction(title: cancel, style: .cancel, handler: nil)
 
         return [nameAction, capitalAction, regionAction, subregionAction, giniAction, populationAction, cancelAction]
-
     }
-
-
 }
-
