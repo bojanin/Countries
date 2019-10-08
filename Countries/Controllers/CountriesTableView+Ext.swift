@@ -17,8 +17,6 @@ extension CountriesTableViewController: UISearchResultsUpdating, UISearchBarDele
             filteredItems = items?.filter({$0.name.contains(searchText)}) ?? []
             tableView.reloadData()
         }
-
-
     }
 
     func searchBarBookmarkButtonClicked(_ searchBar: UISearchBar) {
@@ -42,8 +40,10 @@ extension CountriesTableViewController: UISearchResultsUpdating, UISearchBarDele
             self.items = self.items?.sorted(by: { $0.population > $1.population})
         }
         
-        Alert.alertWithActions(on: self, withTitle: NSLocalizedString("Information", comment: ""), message: nil, withStyle: .alert, andActions: [populationAction, sortGiniAction, sortPopulation])
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: {
+            action in
+        })
+        
+        Alert.alertWithActions(on: self, withTitle: NSLocalizedString("Information", comment: ""), message: nil, withStyle: .alert, andActions: [populationAction, sortGiniAction, sortPopulation, cancel])
     }
-
-    
 }

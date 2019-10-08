@@ -69,8 +69,8 @@ class CountryTableViewCell: BaseTableViewCell<Country> {
 
     override func render() {
         self.countryNameLbl.text = NSLocalizedString("\(self.item?.name ?? "no name specified.")", comment: "")
-        self.countryRegionLbl.text = self.item?.region == "" ? NSLocalizedString("no region specified.", comment: "") : NSLocalizedString("region: \(self.item?.region ?? "no region found.")", comment: "")
-        self.countryCapitalLbl.text = self.item?.capital == "" ? NSLocalizedString("no capital specified.", comment: "") : NSLocalizedString("capital: \(self.item?.capital ?? "no capital found.")", comment: "")
+        self.countryRegionLbl.text = self.item?.region == "" ? NSLocalizedString("no region specified.", comment: "") : NSLocalizedString("Region: \(self.item?.region ?? "no region found.")", comment: "")
+        self.countryCapitalLbl.text = self.item?.capital == "" ? NSLocalizedString("no capital specified.", comment: "") : NSLocalizedString("Capital: \(self.item?.capital ?? "no capital found.")", comment: "")
     }
 
 
