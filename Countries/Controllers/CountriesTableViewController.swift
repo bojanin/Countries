@@ -19,7 +19,6 @@ class CountriesTableViewController: BaseTableViewController<CountryTableViewCell
             let controller = UISearchController(searchResultsController: nil)
             controller.searchBar.delegate = self
             controller.searchResultsUpdater = self
-            controller.dimsBackgroundDuringPresentation = false
             controller.searchBar.sizeToFit()
             definesPresentationContext = true
             tableView.tableHeaderView = controller.searchBar
@@ -74,12 +73,12 @@ class CountriesTableViewController: BaseTableViewController<CountryTableViewCell
     }
 
     private func createActions(for item: Country) -> [UIAlertAction] {
-        let capital = item.capital == "" ? NSLocalizedString("no capital specified.", comment: "") : NSLocalizedString("Capital: \(item.capital)", comment: "")
-        let name = item.name == "" ? NSLocalizedString("no name specified.", comment: "") : NSLocalizedString("\(item.name)", comment: "")
-        let gini = item.gini == nil ? NSLocalizedString("no gini specified.", comment: "") : NSLocalizedString("gini: \(item.gini!)", comment: "")
-        let region = item.region == "" ? NSLocalizedString("no region specified.", comment: "") : NSLocalizedString("region: \(item.region)", comment: "")
-        let subregion = item.subregion == "" ? NSLocalizedString("no subregion specified.", comment: "") : NSLocalizedString("subregion: \(item.subregion)", comment: "")
-        let population = NSLocalizedString("population: \(item.population)", comment: "")
+        let capital = item.capital == "" ? NSLocalizedString("No capital specified.", comment: "") : NSLocalizedString("Capital: \(item.capital)", comment: "")
+        let name = item.name == "" ? NSLocalizedString("No name specified.", comment: "") : NSLocalizedString("\(item.name)", comment: "")
+        let gini = item.gini == nil ? NSLocalizedString("No gini specified.", comment: "") : NSLocalizedString("Gini: \(item.gini!)", comment: "")
+        let region = item.region == "" ? NSLocalizedString("No region specified.", comment: "") : NSLocalizedString("Region: \(item.region)", comment: "")
+        let subregion = item.subregion == "" ? NSLocalizedString("No subregion specified.", comment: "") : NSLocalizedString("Subregion: \(item.subregion)", comment: "")
+        let population = NSLocalizedString("Population: \(item.population)", comment: "")
         let cancel = NSLocalizedString("Cancel", comment: "")
 
         let nameAction = UIAlertAction(title: name, style: .default, handler: nil)
